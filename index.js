@@ -263,12 +263,8 @@ class SuperCluster {
                 }
             }
 
-            if (numPoints === 1) {
-                clusters.push(p);
-            } else {
-                p.parentId = id;
-                clusters.push(createCluster(wx / numPoints, wy / numPoints, id, numPoints, clusterProperties));
-            }
+            p.parentId = id;
+            clusters.push(createCluster(wx / numPoints, wy / numPoints, id, numPoints, clusterProperties));
         }
 
         return clusters;
